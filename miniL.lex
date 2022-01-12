@@ -29,7 +29,7 @@ space	[" "]
 tab	[\t]
 ENT	[\n]
 comment {pound}{pound}({tab}|{space})*.*{ENT}
-whitespace	{ENT}|{tab}|{space}
+whitespace	({ENT}|{tab}|{space})
 
 %%
    /* specific lexer rules in regex */
