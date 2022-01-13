@@ -67,7 +67,7 @@ whitespace	({ENT}|{tab}|{space})
 "("		{printf("L_PAREN\n");}
 ")"		{printf("R_PAREN\n");}
 "["		{printf("L_SQUARE_BRACKET\n");}
-"]"		{printf("R_AQUARE_BRACKET\n");}
+"]"		{printf("R_SQUARE_BRACKET\n");}
 {ASSIGN}	{printf("ASSIGN\n");}
 {SUB}		{printf("SUB\n");}
 {ADD}		{printf("ADD\n");}
@@ -84,7 +84,7 @@ whitespace	({ENT}|{tab}|{space})
 {IDENT}		{printf("IDENT %s\n", yytext);}
 {NUMBER}	{printf("NUMBER %s\n", yytext);}
 {whitespace}	{printf("");}
-		/*.		{printf("ERROR %s\n", yytext);}*/
+.		{printf("ERROR %s\n", yytext);}
 %%
 	/* C functions used in lexer */
 
